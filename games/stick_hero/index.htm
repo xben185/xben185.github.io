@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Stick Hero</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui"/>
+    <link rel="icon" type="image/GIF" href="res/favicon.ico"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="yes"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <style>
+        body, canvas, div {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        .game9gloading {
+            position: absolute;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: #F00;
+        }
+        .game9gloading .game9glogo {
+            display: block;
+            margin: 25% auto 0 auto;
+            width: 70%;
+        }
+    </style>
+</head>
+<body style="padding:0; margin: 0; background: #000;">
+    <canvas id="gameCanvas" width="800" height="450"></canvas>
+    <script src="frameworks/cocos2d-html5/CCBoot.js"></script>
+    <script src="main.js"></script>
+    <script type="text/javascript">
+        var CONF = window.CONF ||{};
+        CONF.lang = {
+            scoreTips: 'Score',
+            bestTips: 'Best'
+        };
+
+        var loadingEle = document.createElement("div");
+        loadingEle.id = "game9gloading";
+        loadingEle.className = "game9gloading";
+        loadingEle.innerHTML = "<img class='game9glogo' src='./res/slogon.png' />";
+        document.getElementsByTagName("body")[0].appendChild(loadingEle);
+        setTimeout(function () {
+            document.getElementsByTagName("body")[0].removeChild(loadingEle);
+            loadingEle = undefined;
+        }, 3000);
+
+        function goHome () {
+
+        }
+        function clickMore () {
+            
+        }
+        function dp_share () {
+
+        }
+        function dp_Ranking () {
+
+        }
+
+        function showAd () {
+
+        }
+        function hideAd () {
+
+        }
+        function dp_submitScore (score) {
+            console.log('score:' + score);
+        }
+    </script>
+</body>
+</html>

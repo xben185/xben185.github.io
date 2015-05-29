@@ -1,0 +1,22 @@
+﻿[
+    {
+        "text":"Pick a cat...",
+        "size":"42"        
+    },
+    {
+        "text": "...and it to the\ngame field.",
+        "size": "34"
+    },
+    {
+        "text": "Cover all the fish\nwith cats to win!",
+        "size": "38"
+    },
+    {
+        "text": "Boxes prevent\ncats' expansion",
+        "size": "34"
+    },
+    {
+        "text":"Pipes change\ncats' direction",
+        "size":"40"        
+    }
+]

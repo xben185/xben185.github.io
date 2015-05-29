@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS3 Borders</title>
+    <link rel="stylesheet" type="text/css" href="../style/common.css" />
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+</head>
+<body>
+    <h1>1.border-radius</h1>
+    <p><code>border-radius</code> 用来设置边框圆角。当使用一个半径时确定一个圆形；当使用两个半径时确定一个椭圆，这个圆（椭圆）与边框的交集形成圆角效果。</p>
+    <h1>2.border-image</h1>
+    <p><code>border-image 属性用来给元素边框添加背景图片。</code></p>
+    <p><code>浏览器应用了 border-image 则不再应用 </code><a class="new" href="#" title=""><code>border-style</code></a> 。 特别注意，若 <a class="new" href="#" title=""><code>border-image-source</code></a> 的值为none或者图片不能显示，则将应用border-style。</p>
+    <h4>Demo 1</h4>
+    <div class="border-image_1">
+        border-image: url(./img/border.png) 30 30 <span class="red">round</span>;
+    </div>
+    <div class="border-image_2">
+        border-image: url(./img/border.png) 30 30 <span class="red">stretch</span>;
+    </div>
+    <h1>3.border-colors 【仅firefox支持】</h1>
+    <div class="cont">
+        <p><strong>border-colors</strong>：<code>&lt;color&gt;</code></p>
+        <p><strong>相关属性</strong>：[ <code>border-top-colors</code> ] || [ <code>border-right-colors</code> ] || [ <code>border-bottom-colors</code> ] || [ <code>border-left-colors</code> ]</p>
+        <p><strong>适用于</strong>：所有元素</p>
+        <p><strong>继承性</strong>：无</p>
+    </div>
+    <p>
+        border的width为(n)px，那么最多可以设置n组边框色，每组边框色宽度为1px；如果border的width为10px，却只设置了6组边框色，那么最后一组边框色将自动渲染剩余的宽度
+本属性为伪属性，其分裂后的<code>border-top-colors</code>, <code>border-right-colors</code>, <code>border-bottom-colors</code>, <code>border-left-colors</code>才是有效属性。
+    </p>
+    <h4>Demo 2</h4>
+    <div class="border-colors">适合需要做多边框的情景【仅firefox支持】</div>
+</body>
+</html>

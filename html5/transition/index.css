@@ -1,0 +1,24 @@
+.box {
+    background: #374045;
+    width: 300px;
+    padding: 10px;
+    text-align: right;
+}
+
+.keyword {
+    padding: 10px;
+    border-radius: 10px;
+    border: 0 none;
+    outline: 0 none;
+    background: rgba(114,114,114,.5);
+    width: 100px;
+    /*transition: width 0.5s ease-in, background 0.5s ease-in;*/
+    transition-property: width, background;
+    transition-timing-function: ease-in;
+    transition-duration: 0.5s;
+}
+
+.keyword:focus {
+    background: #fff;
+    width: 200px;
+}

@@ -1,0 +1,28 @@
+.border-image_1 {
+    border: 15px solid transparent;
+    width: 400px;
+    padding: 10px 20px;
+    -webkit-border-image: url(./img/border.png) 30 30 round;
+    border-image: url(./img/border.png) 30 30 round;
+}
+
+.border-image_2 {
+    margin-top: 20px;
+    border: 15px solid transparent;
+    width: 400px;
+    padding: 10px 20px;
+    -webkit-border-image: url(./img/border.png) 30 30 stretch;
+    border-image: url(./img/border.png) 30 30 stretch;
+}
+
+.border-colors {
+    padding: 10px;
+    border: 10px solid #000;
+    -moz-border-top-colors: #000 #111 #222 #333 #444 #555 #666 #777 #888 #999 #000;
+    -webkit-border-top-colors: #000 #111 #222 #333 #444 #555 #666 #777 #888 #999 #000;
+    border-top-colors: #000 #111 #222 #333 #444 #555 #666 #777 #888 #999 #000;
+    
+    -moz-border-left-colors: #000 #111 #222 #333 #444 #555 #666 #777 #888 #999 #000;
+    -moz-border-right-colors: #000 #111 #222 #333 #444 #555 #666 #777 #888 #999 #000;
+    -moz-border-bottom-colors: #000 #111 #222 #333 #444 #555 #666 #777 #888 #999 #000;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS3 Backgrounds</title>
+    <link rel="stylesheet" type="text/css" href="../style/common.css" />
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+</head>
+<body>
+    <h1>1.background-image</h1>
+    <p><code>background-image 设置背景。<span class="red">【多个背景用“,”隔开】</span></code></p>
+    <pre class="code" data-number="">
+语法：
+    <code>background-image: uri | none | inherit</code>
+    </pre>
+    <h4>Demo 1</h4>
+    <div class="background-image"></div>
+    <pre class="code">
+    <code>
+    background: <span class="red">url(./img/shop.png) 10px 10px no-repeat, url(./img/icon.png) 240px 10px no-repeat, linear-gradient(to bottom, #36a2e0 0%, #fff 100%);</span></code>
+    </pre>
+
+    <h1>2.background-size</h1>
+    <p><code>background-size 设置背景图片大小。<span class="red">【图片大小为相对dom元素的大小，并非相对图片的大小】</span></code></p>
+    <div class="note">
+        <strong>Note:</strong> 如果在设置<code> background-size 之后</code> <a href="#" title=""><code>background</code></a> 又没有设置此属性，那么此属性取默认值（译注：css同一属性后面的覆盖前面的）。
+    </div>
+    <pre class="code" data-number="">
+    语法：
+    <code>/* 关键字 */
+    background-size: cover;
+    background-size: contain;
+
+    /* 一个值: 这个值指定图片的宽度，图片的高度隐式的为auto */
+    background-size: 50%;
+    background-size: 3em;
+    background-size: 12px;
+    background-size: auto;
+
+    /* 两个值: 第一个值指定图片的宽度，第二个值指定图片的高度 */
+    background-size: 50% auto;
+    background-size: 3em 25%;
+    background-size: auto 6px;
+    background-size: auto auto;
+
+    /* 逗号分隔的多个值：设置多重背景 */
+    background-size: auto, auto;     /* 不同于background-size: auto auto */
+    background-size: 50%, 25%, 25%;
+    background-size: 6px, auto, contain;
+
+    background-size: inherit</code>
+    </pre>
+    <h4>Demo 2</h4>
+    <div class="background-size_1" title="background-size: auto;"></div>
+    <pre class="code">
+    <code>
+    background: #eee url(./img/icon.png);
+    background-size: <span class="red">auto;</span></code>
+    </pre>
+    <h4>Demo 3</h4>
+    <div class="background-size_2" title="background-size: 100%;"></div>
+    <pre class="code">
+    <code>
+    background: #eee url(./img/icon.png);
+    background-size: <span class="red">100%;</span></code>
+    </pre>
+
+    <h1 class="dn">3.background-origin</h1>
+    <h4 class="dn">Demo 3</h4>
+
+    <h1 class="dn">4.background-clip</h1>
+    <h4 class="dn">Demo 4</h4>
+</body>
+</html>

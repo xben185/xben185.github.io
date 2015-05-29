@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS3 Transform</title>
+    <link rel="stylesheet" type="text/css" href="../style/common.css" />
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+</head>
+<body>
+    <h4>Demo 1</h4>
+    <div class="heart">
+        <span></span>
+    </div>
+    <h4>Demo 2</h4>
+    <div class="dialog">
+        dialog
+    </div>
+    <h4>Demo 3</h4>
+    <div class="rotate-box">
+        <div class="rotate"></div>
+    </div>
+    <h4>Demo 4</h4>
+    <img src="./img/default.png" width="200" class="scale" alt="placeholder+image">
+    <h4>Demo 5</h4>
+    <div class="btn">
+        <div class="dialog">
+            click me
+        </div>
+        <button id="random">Random</button>
+    </div>
+    <div class="box">
+        Try moving the mouse here
+        <div class="container">
+            <div class="item i1">1</div>
+            <div class="item i2">3</div>
+            <div class="item i3">4</div>
+            <div class="item i4">6</div>
+            <div class="item i5">2</div>
+            <div class="item i6">5</div>
+        </div>
+    </div>
+    <h4>Demo 6</h4>
+    <div class="joker">
+        <img src="./img/a.jpg" alt="placeholder+image">
+        <img src="./img/b.jpg" alt="placeholder+image">
+    </div>
+    <button class="clickme">click me</button>
+    <script type="text/javascript" src="../../lib/jquery/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var container = $('.container');
+            var box = $('.box');
+            var timer = null;
+            var d = ['X', 'Y', 'Z'];
+
+            $('#random').on('click', function () {
+                // 0 45 90 135 180 225 270 315 360
+                var rand = Math.floor(Math.random() * 3);
+                var randeg = Math.ceil(Math.random() * 8);
+                container.css({
+                    'transform': 'rotate' + d[rand] + '(' + 45 * randeg + 'deg)'
+                });
+            });
+
+            box.on('mousemove', function (e) {
+                if(timer) {
+                    window.clearTimeout(timer);
+                    timer = null;
+                }
+                timer = window.setTimeout(function () {
+                    box.css('perspective', e.clientY);
+                    container.css({
+                        'transform': 'rotateX(' + (e.clientX % 360) + 'deg) rotateY(' + (e.clientY % 360) + 'deg)'
+                    });
+                }, 30);
+            });
+
+            $('.clickme').on('click', function () {
+                $('.joker').toggleClass('c');
+            });
+        });
+    </script>
+</body>
+</html>

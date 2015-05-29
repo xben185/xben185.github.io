@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cats' Hunger</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+<meta name="HandheldFriendly" content="true">
+<meta name="robots" content="noindex,nofollow">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Cat's Hunger">
+<link rel="stylesheet" href="styles.css" type="text/css">
+<link rel="icon" href="icon.ico">
+<style>#sg-loadscrn{
+    position:fixed; top:0;left:0;width:100%; height:100%; background-color:#fff; z-index:9999;
+}
+
+#sg-spinner{
+	position: absolute; width: 150px; height: 50px; top:50%; left:50%; margin-top:-25px; margin-left:-75px;
+	background-image: url('./sg-loader.gif');
+}
+
+#sg-spinner.no-img{
+    background: #ffffff;
+}
+
+#sg-loadtext{
+    position:absolute;
+    font-family: sans-serif;
+    top:50%; left:50%;
+    width: 250px;
+    margin-left:-125px;
+    margin-top:-125px;
+    text-align:center;
+    line-height:150%;
+    font-size:16px;
+}</style>
+<script type="text/javascript">
+        window.gameLangs = ['en', 'de', 'es', 'fr', 'it', 'ru', 'tr'];
+        window.gameJS = [
+        'js/phaser-arcade-physics.min.js',
+        'js/game-units.js',
+        'js/level-manager.js',
+        'js/tutorial.js',
+        'js/start_menu.js',
+        'js/level-map.js',
+        'js/main.js',
+        'js/sponsor_stuff.js'
+        ];
+        window.gameOnLoadScript = "init()";
+    </script>
+    <script type="text/javascript" src="./softgames-1.1.js"></script>
+    <script type="text/javascript" src="./sg.hooks.js"></script>
+</head>
+<body>
+    <div id="catshunger-game"></div>
+    <div id="incorrect-orientation"></div>
+</body>
+</html>

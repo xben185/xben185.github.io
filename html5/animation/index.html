@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS3 Animation</title>
+    <link rel="stylesheet" type="text/css" href="../style/common.css" />
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+</head>
+<body>
+    <h4>Demo 1</h4>
+    <div id="loading"></div>
+    <h4>Demo 2</h4>
+    <div class="slide"></div>
+    <pre class="code">
+    <code>
+    .slide::after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: -webkit-gradient(radial, 25 25, 0, 25 25, 25, from(#f00), to(#000));
+        -webkit-animation: <span class="red">slide 4s linear 0s infinite</span>;
+        -webkit-animation-play-state: <span class="red">running</span>;
+    }
+
+    .slide:hover::after {
+        -webkit-animation-play-state: <span class="red">paused</span>;
+    }
+
+    @-webkit-keyframes slide {
+        0% {
+            left: 125px;
+            top: 0;
+        }
+        25% {
+            left: 250px;
+            top: 125px;
+        }
+        50% {
+            left: 125px;
+            top: 250px;
+        }
+        75% {
+            left: 0;
+            top: 125px;
+        }
+        100% {
+            left: 125px;
+            top: 0;
+        }
+    }</code>
+    </pre>
+    <h4>Demo 3</h4>
+    <div class="fall"></div>
+    <pre class="code">
+    <code>
+    .fall::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        margin-left: -25px;
+        background: -webkit-gradient(radial, 25 25, 0, 25 25, 25, from(#f00), to(#000));
+        -webkit-animation: fall 10s ease-in 0s infinite;
+        -webkit-animation-play-state: running;
+    }
+
+    .fall:hover::after {
+        -webkit-animation-play-state: paused;
+    }
+
+
+    @-webkit-keyframes fall {
+        0% {
+            top: 0;
+            -webkit-animation-timing-function: ease-in;
+        }
+        9% {
+            top: 250px;
+            -webkit-animation-timing-function: ease-out;
+        }
+        18% {
+            top: 70px;
+            -webkit-animation-timing-function: ease-in;
+        }
+        27% {
+            top: 250px;
+            -webkit-animation-timing-function: ease-out;
+        }
+        36% {
+            top: 130px;
+            -webkit-animation-timing-function: ease-in;
+        }
+        45% {
+            top: 250px;
+            -webkit-animation-timing-function: ease-out;
+        }
+        54% {
+            top: 180px;
+            -webkit-animation-timing-function: ease-in;
+        }
+        63% {
+            top: 250px;
+            -webkit-animation-timing-function: ease-out;
+        }
+        72% {
+            top: 220px;
+            -webkit-animation-timing-function: ease-in;
+        }
+        81% {
+            top: 250px;
+            -webkit-animation-timing-function: ease-out;
+        }
+        90% {
+            top: 240px;
+            -webkit-animation-timing-function: ease-in;
+        }
+        100% {
+            top: 250px;
+            -webkit-animation-timing-function: ease-out;
+        }
+    }
+    </code>
+    </pre>
+</body>
+</html>
