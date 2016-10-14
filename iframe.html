@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <base target="_self">
+    <title>iframe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="<&$bsShowVideo.title|escape&>">
+    <meta name="keywords" content="<&$bsShowVideo.title|escape&>">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+    <style type="text/css">
+        body {
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="//m.baidu.com/static/searchbox/openjs/aio.js?v=201610"></script>
+    <script type="text/javascript">
+        $(function () {
+            var data = {
+                vid: '144115189742414315',
+                isHalfScreen: !0,
+                title: 'video demo',
+                src: 'http://v.youku.com/v_show/id_XMTc0OTQ0NDUwNA==.html?tpa=dW5pb25faWQ9MTAzNzQ5XzEwMDAwMV8wMV8wMQ',
+                pageUrl: location.href,
+                videoUrl: 'http://gedftnj8mkvfefuaefm.exp.bcevod.com/mda-gjfgt1runv5c2p7f/mda-gjfgt1runv5c2p7f.mp4',
+                ubcMonitorInfo: {
+                    vid: '144115189742414315',
+                    site: '1001',
+                    srcUrl: 'http://v.youku.com/v_show/id_XMTc0OTQ0NDUwNA==.html?tpa=dW5pb25faWQ9MTAzNzQ5XzEwMDAwMV8wMV8wMQ',
+                    pageType: 'feed_videopage'
+                }
+            };
+            data = JSON.stringify(data);
+            try {
+                Box.isIOS ? Box.ios.invokeApp('video', {
+                    action: 'invokePlayer',
+                    params: encodeURIComponent(data),
+                    minver: '7.3.0.0'
+                }) : Box.android.invokeApp('Bdbox_android_capi_video', 'invokePlayer', [data]);
+            }
+            catch (e) {
+            
+            }
+        });
+    </script>
+</body>
+</html>
